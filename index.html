@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokédex Debug Lab</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Pokédex Debug Lab</h1>
+      <p>Search, filter, favourite, train and battle your Pokémon.</p>
+    </header>
+
+    <main>
+      <section class="controls">
+        <input type="text" id="search-input" placeholder="Search by name..." />
+        <select id="type-filter">
+          <option value="All">All types</option>
+          <option value="Electric">Electric</option>
+          <option value="Fire">Fire</option>
+          <option value="Water">Water</option>
+          <option value="Grass">Grass</option>
+          <option value="Normal">Normal</option>
+        </select>
+        <label>
+          Training boost:
+          <input type="number" id="train-amount" value="5" min="1" max="20" />
+        </label>
+      </section>
+
+      <p class="stats">
+        Showing <span id="shown-count">0</span> Pokémon &nbsp;|&nbsp;
+        Favourites: <span id="fav-count">0</span>
+      </p>
+
+      <section id="pokemon-grid" class="grid"></section>
+
+      <section class="battle">
+        <h2>Battle Arena</h2>
+        <div class="battle-row">
+          <select id="fighter1"></select>
+          <span>vs</span>
+          <select id="fighter2"></select>
+          <button id="battle-btn">Battle!</button>
+        </div>
+        <p id="battle-result"></p>
+      </section>
+    </main>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
