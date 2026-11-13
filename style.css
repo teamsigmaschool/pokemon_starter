@@ -95,8 +95,10 @@ button {
   align-items: center;
 }
 
-.emoji {
-  font-size: 40px;
+.sprite {
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
 }
 
 .fav-btn {
@@ -123,11 +125,21 @@ button {
   color: #ffffff;
 }
 
-.type-electric { background: #e0b800; }
-.type-fire { background: #f08030; }
-.type-water { background: #3b82f6; }
-.type-grass { background: #3a9d4a; }
-.type-normal { background: #8a8a8a; }
+.type-electric {
+  background: #e0b800;
+}
+.type-fire {
+  background: #f08030;
+}
+.type-water {
+  background: #3b82f6;
+}
+.type-grass {
+  background: #3a9d4a;
+}
+.type-normal {
+  background: #8a8a8a;
+}
 
 .train-btn {
   margin-top: 8px;

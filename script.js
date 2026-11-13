@@ -10,13 +10,9 @@ const fighter2 = document.getElementById("fighter2");
 const battleBtn = document.getElementById("battle-btn");
 const battleResult = document.getElementById("battle-result");
 
-const typeEmoji = {
-  Electric: "⚡",
-  Fire: "🔥",
-  Water: "💧",
-  Grass: "🌿",
-  Normal: "⭐",
-};
+// The pictures come from the public PokeAPI sprites repo, so you need internet.
+const spriteBase =
+  "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/";
 
 let favourites = []; // ids of the favourite Pokémon
 
@@ -30,7 +26,7 @@ function renderCards(list) {
     card.className = "pokemon-card";
     card.innerHTML = `
       <div class="card-top">
-        <span class="emoji">${typeEmoji[p.type]}</span>
+        <img class="sprite" src="${spriteBase}${p.dex}.png" alt="${p.name}" />
         <button class="fav-btn" data-id="${p.id}">${isFav ? "♥" : "♡"}</button>
       </div>
       <h3>${p.name}</h3>
