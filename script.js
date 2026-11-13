@@ -115,7 +115,7 @@ function battle() {
   const p1 = pokemon.find((item) => item.id === Number(fighter1.value));
   const p2 = pokemon.find((item) => item.id === Number(fighter2.value));
 
-  const power1 = getPower(p1);
+  const power1 = getPowr(p1);
   const power2 = getPower(p2);
 
   if (power1 > power2) {
